@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Online Image Editor" />
+    <meta name="theme-color" content="#099" />
+    <title>Image Editor</title>
+    <link rel="icon" href="./res/icon.jpg">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./libs/dialog/duDialog.css">
+    <link rel="stylesheet" href="./libs/fontawesome-free-5.15.3-web/css/all.css">
+</head>
+
+<body id="body">
+    <div class="panel" id="panel">
+        <div class="item" id="createnew"
+            title="Click This Button To Create New Image (This Will Reset Anything eg. Drawings, Shapes and Uploaded Images)">
+            <i class="fas fa-file-image    "></i>
+        </div>
+        <div class="item" class="upload" title="Click This Button To Upload Your Images..." id="upload"><input
+                type="file" id="file" class="file" /><i class="fa fa-upload totop"></i></div>
+        <div class="item save" title="Click This Button To Save Current Image" id="save"><i
+                class="fas pulse fa-save"></i>
+        </div>
+        <div class="item" title="Click This Button To Draw With Pen" id="pen"><i class="fas pendraw fa-pen-fancy"></i>
+        </div>
+        <div class="item" title="Click This Button To Customize Pen" id="customizepen"><i
+                class="fas brush fa-brush changepen"></i></div>
+        <div class="item" title="Click This Button To Undo " id="undo"><i class="fa fa-undo spin-left"
+                aria-hidden="true"></i></div>
+        <div class="item" title="Click This Button To Redo " id="redo"><i class="fas fa-redo spin-right "></i>
+        </div>
+        <div class="item" title="Click This Button To Filter Images " id="filter"><i class="fa rotate fa-filter"
+                aria-hidden="true"></i></div>
+        <div class="item" title="Click This Button To Clear All " id="clear"><i class="fa vibrate fa-eraser"
+                aria-hidden="true"></i></div>
+        <div class="item" id="opacity" title="Click This Button To Change Opacity Of The Image"><i
+                class="fas fa-image pulse    "></i></div>                      
+        <div class="item" id="objectsadding"><i class="fas fa-shapes pulse "></i></div>
+        <div class="item" id="objectsel" title="Click This Button To Add Objects"><i class="fa spin-right fa-plus"></i>
+        </div>
+        <div class="item" id="editobjects" title="Click This Button To Edit Objects"><i class="fas pulse fa-edit "></i>
+        </div>
+        <div class="item" id="centerObject" title="Click This Button To Center An Object">
+            <i class="fas fa-ruler    "></i>
+        </div>
+
+        <div class="item" id="zplus" title="Z Index +">Z + </div>
+        <div class="item" id="zminus" title="Z Index -">Z - </div>
+        <div class="item" id="objectsgetel" title="Object Select Mode"><i class="fa fa-mouse-pointer"
+                aria-hidden="true"></i></div>
+        <div class="item" title="Read Documentation" id="documentation"><i class="fa fa-file" aria-hidden="true"></i></div>
+        <div class="item" title="About" id="about"><i class="fa fa-info" aria-hidden="true"></i></div>
+        <hr>
+        <div class="item" id="allowgrid" title="Click This Button To Enable Grid">
+            <i class="fas fa-ruler-horizontal    "></i>
+        </div>
+        <div class="item" id="cropimage" title="Click This Button To Crop Image">
+            <i class="fa fa-crop" aria-hidden="true"></i>
+        </div>
+        <div class="item" id="addstickers" title="Click This Button To Add Stickers">
+            <i class="fas fa-images"></i>
+        </div>
+    </div>
+
+    <div class="fixed47">
+        <span style="color:#0aa">Mini </span>ImageEditor v1.0.1
+    </div>
+
+    <div class="currentObject">
+        Current Object:
+    </div>
+
+    <div class="coords">
+        X:<br />
+        Y:
+    </div>
+
+    <script src="./libs/dialog/duDialog.js"></script>
+    <script type="text/javascript">
+        window.duDialog = duDialog;
+    </script>
+    <script src="./libs/fontawesome-free-5.15.3-web/js/all.js"></script>
+    <script src="./scripts/ImageEditor.js"></script>
+	<script src="./scripts/main.js"></script>
+</body>
+
+</html>
