@@ -1,1 +1,1 @@
-# silver-tribble
+# Mini Image Editor (HTML, CSS, JS)
