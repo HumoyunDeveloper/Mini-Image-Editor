@@ -161,7 +161,7 @@ const saveFile = (_type, _ftype, _pix) => {
 
 function sayHello() {
     if (localStorage.getItem("showing") === "true") {
-        var dialog = duDialog("Hello!", "This is an ImageEditor and it is able to create modify and save Images via various formats such as image/jpeg, image/png. <br/><br/><b> <label><input type='checkbox' name='showing' id='showing' onchange='this.checked === true ? localStorage.setItem(`showing`, `false`) : localStorage.setItem(`showing`, `true`)' /> Do Not Show Again</label></b>", { init: true });
+        var dialog = duDialog("Hello!", "This is an ImageEditor and can create, modify and save images via various formats such as image/jpeg, image/png. <br/><br/><b> <label><input type='checkbox' name='showing' id='showing' onchange='this.checked === true ? localStorage.setItem(`showing`, `false`) : localStorage.setItem(`showing`, `true`)' /> Do Not Show Again</label></b>", { init: true });
         dialog.show();
     } else {
         // do nothing
@@ -405,7 +405,7 @@ function getObject() {
             });
         dialog.show();
     } else {
-        var dialog = duDialog(null, "To Add Or Edit Objects You Need To Change Mode To <b>Object Editor</b>", { init: true });
+        var dialog = duDialog(null, "To Add Or Edit Objects You Need To Change the Mode To <b>Object Editor</b>", { init: true });
         dialog.show();
     }
 }
@@ -681,7 +681,7 @@ function zMinus() {
             dialog.show();
         }
     } else {
-        var dialog = duDialog(null, "To Add Or Edit Objects You Need To Change Mode To <b>Object Editor</b>", { init: true });
+        var dialog = duDialog(null, "To Add Or Edit Objects You Need To Change the Mode To <b>Object Editor</b>", { init: true });
         dialog.show();
     }
 }
@@ -811,20 +811,20 @@ function MouseMove(e) {
 
 function readDoc() {
     duDialog("Mini ImageEditor", `
-    <p><i class="fa fa-upload " style="color: #099; margin: 0 .5em 0 0;font-size: 20px;" aria-hidden="true"></i>: To Upload Your Images Make Sure They SHould Be Less Than 2MB.</p> 
-    <p><i class="fa fa-save"style="color: #099; margin: 0 .5em 0 0;font-size: 20px;" aria-hidden="true"></i>: To Save Image, Formats(PNG, JPEG, BASE64).</p> 
-    <p><i class="fa fa-pen-fancy" style="color: #099; margin: 0 .5em 0 0;font-size: 20px;" aria-hidden="true"></i>: To Enable Pen Mode, By Default It Will Be Dsiabled.</p> 
-    <p><i class="fa fa-brush" style="color: #099; margin: 0 .5em 0 0;font-size: 20px;" aria-hidden="true"></i>: To Change Pen Settings Such As Color, Line Width, LineCap, LineJoin. </p> 
+    <p><i class="fa fa-upload " style="color: #099; margin: 0 .5em 0 0;font-size: 20px;" aria-hidden="true"></i>: Upload an Image, Make Sure They SHould Be Less Than 2MB.</p> 
+    <p><i class="fa fa-save"style="color: #099; margin: 0 .5em 0 0;font-size: 20px;" aria-hidden="true"></i>: Save Image, Available Formats (PNG, JPEG, BASE64).</p> 
+    <p><i class="fa fa-pen-fancy" style="color: #099; margin: 0 .5em 0 0;font-size: 20px;" aria-hidden="true"></i>: Enable Pen Mode, By Default It Will Be Disabled.</p> 
+    <p><i class="fa fa-brush" style="color: #099; margin: 0 .5em 0 0;font-size: 20px;" aria-hidden="true"></i>: Pen Settings Such As Color, Line Width, LineCap, LineJoin. </p> 
     <p><i class="fa fas fa-undo" style="color: #099; margin: 0 .5em 0 0;font-size: 20px;" aria-hidden="true"></i>: Undo/Redo Buttons Maximum Saving Is Unlimited.</p> 
     <p><i class="fa fas fa-eraser"style="color: #099; margin: 0 .5em 0 0;font-size: 20px;" style="color: #099; margin: 0 .5em 0 0;font-size: 20px;" aria-hidden="true"></i>: To Erase Whole Image.</p> 
-    <p><i class="fa fas fa-image" style="color: #099; margin: 0 .5em 0 0;font-size: 20px;" aria-hidden="true"></i>: To Change Opacity Of The Image (0 to 1) If It Is 0 And Then You Will No Longer See The Image..</p> 
-    <p><i class="fa fas fa-shapes" style="color: #099; margin: 0 .5em 0 0;font-size: 20px;" aria-hidden="true"></i>: To Enable Object Editor Mode, If You Click Enable This Mode The Pen Mode Will Be Disabled. </p>
-    <p><i class="fa fas fa-plus" style="color: #099; margin: 0 .5em 0 0;font-size: 20px;" aria-hidden="true"></i>: To Add Objects To The Image (If Object Mode Is Enabled) </p>
-    <p><i class="fa fas fa-edit" style="color: #099; margin: 0 .5em 0 0;font-size: 20px;" aria-hidden="true"></i>: To Edit Current Active Object (If Object Mode Is Enabled) </p>
-    <p><i class="fa fas fa-ruler" style="color: #099; margin: 0 .5em 0 0;font-size: 20px;" aria-hidden="true"></i>: To Center Objects (If Object Mode Is Enabled) </p>
-    <p>Z+: To Increment Z Index Of an Object (If Object Mode Is Enabled) </p>
-    <p>Z-: To Decrement Z Index Of an Object (If Object Mode Is Enabled) </p>
-    <p><i class="fa fa-mouse-pointer" style="color: #099; margin: 0 .5em 0 0;font-size: 20px;"></i>: To Choose An Object To Use It As Active Object (If Object Mode Is Enabled) </p>
+    <p><i class="fa fas fa-image" style="color: #099; margin: 0 .5em 0 0;font-size: 20px;" aria-hidden="true"></i>: Change Opacity Of The Image (0 to 1) If It Is 0 And Then You Will No Longer See The Image..</p> 
+    <p><i class="fa fas fa-shapes" style="color: #099; margin: 0 .5em 0 0;font-size: 20px;" aria-hidden="true"></i>: Enable Object Editor Mode, If You Click Enable This Mode The Pen Mode Will Be Disabled. </p>
+    <p><i class="fa fas fa-plus" style="color: #099; margin: 0 .5em 0 0;font-size: 20px;" aria-hidden="true"></i>: Add Objects (If Object Mode Is Enabled) </p>
+    <p><i class="fa fas fa-edit" style="color: #099; margin: 0 .5em 0 0;font-size: 20px;" aria-hidden="true"></i>: Edit Current Active Object (If Object Mode Is Enabled) </p>
+    <p><i class="fa fas fa-ruler" style="color: #099; margin: 0 .5em 0 0;font-size: 20px;" aria-hidden="true"></i>: Center an Object (If Object Mode Is Enabled) </p>
+    <p>Z+: Incremease Z Index Of an Object (If Object Mode Is Enabled) </p>
+    <p>Z-: Decremease Z Index Of an Object (If Object Mode Is Enabled) </p>
+    <p><i class="fa fa-mouse-pointer" style="color: #099; margin: 0 .5em 0 0;font-size: 20px;"></i>: Choose Object (If Object Mode Is Enabled) </p>
 
     `, {
         init: true,
