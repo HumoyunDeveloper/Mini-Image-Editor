@@ -506,7 +506,7 @@ function showAboutDialog() {
     <img src="../res/icon.jpg" class="center">
     <h1 style="text-align:center">ImageEditor</h1>
     <br/>
-    <p style="text-align: center">This application is created by Humoyun Sattoraliyev. Uses CanvasRenderingContext2D. 
+    <p style="text-align: center">This application is created by Humoyun. Uses CanvasRenderingContext2D. 
     </p><p style="text-align: center; font-weight:bold;">Version: v1.0.1</p><br/>
     `, { init: true });
     dialog.show();
